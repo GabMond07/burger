@@ -1,0 +1,7 @@
+{
+  "name": "pf2_burguer_queen",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

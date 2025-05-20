@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Burguer Queen</string>
+    <string name="title_activity_main">Burguer Queen</string>
+    <string name="package_name">io.ionic.burguerQueen</string>
+    <string name="custom_url_scheme">io.ionic.burguerQueen</string>
+</resources>

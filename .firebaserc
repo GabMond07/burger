@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "ionic-burguer-queen-20b18"
-  }
+    "default": "ionic-burguer-queen-b3b0f",
+    "www": "ionic-burguer-queen-b3b0f"
+  },
+  "targets": {},
+  "etags": {}
 }

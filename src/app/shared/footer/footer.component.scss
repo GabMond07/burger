@@ -1,8 +1,19 @@
+ion-footer {
+  --background: #222222 !important;
+  --color: #fff;
+}
+ion-toolbar {
+  --background: #222222 !important;
+  --color: #fff;
+}
 
 ion-footer ion-title{
-  font-size: 100%;
+  font-size: 60%;
+  --background: #222222 !important;
 }
 
 ion-footer ion-title.ios{
   padding: 2px;
+  --background: #222222 !important;
+
 }

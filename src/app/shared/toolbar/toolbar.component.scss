@@ -1,6 +1,13 @@
-
 .logo{
   height: 40px;
+}
+
+ion-toolbar {
+  --background: #222222;
+  --color: #000;
+  --border-color: #ccc;
+  --opacity: 1;
+  backdrop-filter: none;
 }
 
 .back-botton{

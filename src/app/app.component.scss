@@ -1,0 +1,5 @@
+ion-app {
+  --background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  background: var(--background);
+  min-height: 100vh;
+}

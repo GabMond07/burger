@@ -11,3 +11,7 @@ ion-card.product ion-item{
   --padding-end: 0px;
   --inner-padding-end: 0px;
 }
+
+ion-content {
+  --background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}

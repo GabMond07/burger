@@ -1,7 +1,7 @@
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
@@ -22,6 +22,7 @@ import { CreateAccountComponent } from './shared/create-account/create-account.c
 import { ListProductsOrderComponent } from './shared/list-products-order/list-products-order.component';
 import { StripeState } from './state/stripe/stripe.state';
 import { OrdersState } from './state/orders/orders.state';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 export function HttpLoaderFactory(http: HttpClient){
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -50,7 +51,13 @@ export function HttpLoaderFactory(http: HttpClient){
     FooterComponent,
     LoginComponent,
     CreateAccountComponent,
-    ListProductsOrderComponent
+    ListProductsOrderComponent,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     NavParams
